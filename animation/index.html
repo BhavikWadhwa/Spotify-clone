@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="square"></div>
+    <div class="line"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+    <div class="line4"></div>
+
+
+
+    <style>
+        *{
+            background-color: black;
+        }
+        .square{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: orange;
+            animation: glow 0.5s infinite;
+            top:50px;
+            border-radius: 50%;
+
+        }
+        .line{
+            position: absolute;
+            width: 85rem;
+            height: 10px;
+            background-color: cyan;
+            top:100px;
+        }
+        .line2{
+            position: absolute;
+            width: 85rem; 
+            height: 10px;
+            background-color: cyan;
+            top: 200px;
+            left: 50px;
+        }
+        .line3{
+            position: absolute;
+            width: 350px;
+            height: 10px;
+            background-color: cyan;
+            top: 300px;
+        }
+        .line4{
+            position: absolute;
+            width: 350px;
+            height: 10px;
+            background-color: cyan;
+            top: 400px;
+        }
+
+        @keyframes glow{
+            0%{
+                box-shadow: 1px 1px 3px 3px black;
+            }
+            50%{
+                box-shadow: 1px 1px 2px 2px brown;
+            }
+            100%{
+                box-shadow: 1px 1px 3px 3px red;
+            }
+        }
+
+        
+    </style>
+<script src= 
+"https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"> 
+      </script> 
+
+      <script>
+        let tl= anime.timeline({
+            duration:800,
+            easing:"easeInOutExpo",
+            loop:true
+        });
+
+        let square=document.querySelector(".square");
+        let line=document.querySelector(".line");
+
+        tl.add({
+            targets: square,
+            translateX: 1350,
+        });
+
+        tl.add({
+            targets: square,
+            translateY: 100,
+            rotate: "1turn",
+            // borderRadius: ["0%", "50%"]
+        });
+
+        tl.add({
+            targets: square,
+            translateX: 0,
+            // borderRadius: ["0%", "50%"]
+        });
+
+        tl.add({
+            targets: square,
+            translateY: 200,
+            rotate: "1turn",
+            borderRadius: ["0%", "50%"]
+        });
+
+        tl.add({
+            targets: square,
+            translateX: 1350,
+            borderRadius: ["50%", "0%"]
+        });
+
+        tl.add({
+            targets: square,
+            translateY: 0,
+            borderRadius: ["50%", "0%"]
+        });
+
+        let tl1 = anime.timeline({
+            duration: 1000,
+            loop: true
+        });
+
+        tl1.add({
+            targets: line,
+            
+        });
+
+        tl1.add({
+            targets: line,
+            delay: 1000,
+            width: 0
+        });
+      </script>
+</body>
+</html>

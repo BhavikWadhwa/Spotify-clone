@@ -1,0 +1,25 @@
+@tailwind base; 
+@tailwind components; 
+@tailwind utilities;
+
+#scrollable{
+    padding-top: 10px;
+    max-height:35rem; 
+    overflow-x: hidden;
+    max-width: max-content;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+#scrollablee{
+    padding-top: 10px;
+    max-height:46rem; 
+    overflow-x: hidden;
+    max-width: max-content;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.arrows{
+    @apply border border-1 rounded-md p-4 border-white;
+}
