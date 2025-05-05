@@ -25,3 +25,5 @@ I used rounded corners with rounded-md and rounded-full for a sleek look kinda
 I used hover: effects to add interactivity on teh webiste like changing colors or making icons scale up, you can find that by hovering on most of the buttons and banners
 
 I added responsive behavior by using Tailwind’s md: prefix, so the layout changes depending on screen size, it still has some flaws here and there but i tried out most of it
+
+deployed page- https://bhavikwadhwa.github.io/Spotify-clone/
